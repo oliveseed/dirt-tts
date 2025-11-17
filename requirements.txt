@@ -1,0 +1,11 @@
+torch==2.8
+torchaudio==2.8
+numpy==1.26.4
+einops==0.8.1
+safetensors==0.6.2
+packaging==25.0
+huggingface-hub==0.34.4
+gradio
+alias_free_torch
+k_diffusion
+einops_exts
