@@ -1,0 +1,29 @@
+model:
+  architecture:
+    enc_num_layers: 4
+    enc_embed_dim: 512
+    enc_hidden_dim: 2048
+    enc_head_dim: 32
+    dec_num_layers: 6
+    dec_embed_dim: 1024
+    dec_hidden_dim: 4096
+    dec_head_dim: 64
+    num_query_heads: 16
+    num_kv_heads: 16
+    ca_num_query_heads: 16
+    ca_num_kv_heads: 16
+    ca_head_dim: 64
+    text_vocab_size: 256
+    audio_vocab_size: 46660
+  eos_tok_id: 46657
+  pad_tok_id: 46658
+  bos_tok_id: 46659
+  text_pad_id: 0
+  ckpt_path: "/path/to/ckpt/dirt_sc_1320000.pth"
+  device: "cuda"
+
+tokenizer:
+  ckpt_path: "/path/to/codec/ckpt/model.ckpt"
+  config_path: "/path/to/codec/ckpt/model_config.json"
+  posthoc_bottleneck: "1x46656_400bps"
+  device: "cuda"
