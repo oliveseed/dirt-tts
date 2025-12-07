@@ -12,8 +12,9 @@ pip install -U flash-attn --no-build-isolation
 ## Updates
 - [x] Create GitHub repo
 - [x] Add inference code
+- [x] Add training code
+- [ ] Add data preprocessing code
 - [ ] Add demos
-- [ ] Add training code
 - [ ] Add pretrained model checkpoints
 
 ## References

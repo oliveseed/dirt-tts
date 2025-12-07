@@ -4,7 +4,7 @@ model:
     enc_embed_dim: 512
     enc_hidden_dim: 2048
     enc_head_dim: 32
-    dec_num_layers: 6
+    dec_num_layers: 12
     dec_embed_dim: 1024
     dec_hidden_dim: 4096
     dec_head_dim: 64
@@ -15,12 +15,38 @@ model:
     ca_head_dim: 64
     text_vocab_size: 256
     audio_vocab_size: 46660
-  eos_tok_id: 46657
-  pad_tok_id: 46658
-  bos_tok_id: 46659
+  audio_eos_id: 46657
+  audio_pad_id: 46658
+  audio_bos_id: 46659
   text_pad_id: 0
+  max_text_len: 512
+  max_audio_len: 766
   ckpt_path: "/path/to/ckpt/dirt_sc_1320000.pth"
   device: "cuda"
+
+training:
+  max_steps: 500010
+  batch_size: 16
+  learning_rate: 1e-4
+  warmup_steps: 1000
+  grad_clip_norm: 10.0
+  log_interval: 100
+  save_interval: 20000
+  eval_interval: 10000
+  weight_decay: 0.01
+  beta1: 0.9
+  beta2: 0.98
+  adamw_eps: 1e-8
+  lr_decay_style: "constant"
+  torch_compile: true
+  unconditional_frac: 0.1
+  device: "cuda"
+  wandb:
+    use_wandb: true
+    project_name: "dirt"
+    run_name: "dirt_experiment"
+  save_path: "./checkpoints/"
+  data_path: "/path/to/dataset.parquet"
 
 tokenizer:
   ckpt_path: "/path/to/codec/ckpt/model.ckpt"

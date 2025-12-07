@@ -71,9 +71,9 @@ class DirtTTS:
 
         self.vocab_size = model_cfg['audio_vocab_size']
         self.text_pad_val = dirt_config['model']['text_pad_id']
-        self.eos_tok = dirt_config['model']['eos_tok_id']
-        self.pad_tok = dirt_config['model']['pad_tok_id']
-        self.bos_tok = dirt_config['model']['bos_tok_id']
+        self.eos_tok = dirt_config['model']['audio_eos_id']
+        self.pad_tok = dirt_config['model']['audio_pad_id']
+        self.bos_tok = dirt_config['model']['audio_bos_id']
 
         # load backbone
         state_dict = torch.load(dirt_config['model']['ckpt_path'], map_location="cpu")

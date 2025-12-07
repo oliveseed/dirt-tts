@@ -9,3 +9,7 @@ gradio
 alias_free_torch
 k_diffusion
 einops_exts
+omegaconf
+transformers
+scikit-learn
+pyarrow
