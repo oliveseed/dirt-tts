@@ -1,7 +1,7 @@
 # Dirt
 Dirt is a low budget text-to-speech model that generates highly realistic speech while being architecturally simple and lightweight enough to be trained from scratch on a single GPU.
 
-### Installation
+## Installation
 ```bash
 git clone https://github.com/oliveseed/dirt-tts.git
 cd dirt-tts
