@@ -1,5 +1,5 @@
 '''
-Single GPU training script
+Single GPU training script using bf16 and torch.compile
 
 Usage:
     python3 train.py

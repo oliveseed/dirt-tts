@@ -1,5 +1,5 @@
-torch==2.8
-torchaudio==2.8
+torch==2.11
+torchaudio==2.11
 numpy==1.26.4
 einops==0.8.1
 safetensors==0.6.2
