@@ -13,3 +13,4 @@ omegaconf
 transformers
 scikit-learn
 pyarrow
+stable_codec @ git+https://github.com/lucadellalib/stable-codec.git@main#egg=stable_codec

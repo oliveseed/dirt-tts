@@ -1,9 +1,9 @@
 model:
   architecture:
     enc_num_layers: 4
-    enc_embed_dim: 512
-    enc_hidden_dim: 2048
-    enc_head_dim: 32
+    enc_embed_dim: 1280
+    enc_hidden_dim: 5120
+    enc_head_dim: 80
     dec_num_layers: 12
     dec_embed_dim: 1024
     dec_hidden_dim: 4096
@@ -13,43 +13,16 @@ model:
     ca_num_query_heads: 16
     ca_num_kv_heads: 16
     ca_head_dim: 64
-    text_vocab_size: 256
-    audio_vocab_size: 46660
+    enc_vocab_size: 32000
+    dec_vocab_size: 46688
   audio_eos_id: 46657
   audio_pad_id: 46658
   audio_bos_id: 46659
-  text_pad_id: 0
-  max_text_len: 512
-  max_audio_len: 766
-  ckpt_path: "/path/to/ckpt/dirt_sc_1320000.pth"
+  ckpt_path: ""
   device: "cuda"
 
-training:
-  max_steps: 500010
-  batch_size: 16
-  learning_rate: 1e-4
-  warmup_steps: 1000
-  grad_clip_norm: 10.0
-  log_interval: 100
-  save_interval: 20000
-  eval_interval: 10000
-  weight_decay: 0.01
-  beta1: 0.9
-  beta2: 0.98
-  adamw_eps: 1e-8
-  lr_decay_style: "constant"
-  torch_compile: true
-  unconditional_frac: 0.1
-  device: "cuda"
-  wandb:
-    use_wandb: true
-    project_name: "dirt"
-    run_name: "dirt_experiment"
-  save_path: "./checkpoints/"
-  data_path: "/path/to/dataset.parquet"
-
-tokenizer:
-  ckpt_path: "/path/to/codec/ckpt/model.ckpt"
-  config_path: "/path/to/codec/ckpt/model_config.json"
+audio_codec:
+  ckpt_path: ""
+  config_path: ""
   posthoc_bottleneck: "1x46656_400bps"
   device: "cuda"
