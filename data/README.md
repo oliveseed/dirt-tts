@@ -1,4 +1,4 @@
-The nanoTTS model can be trained on any speech dataset, but this project uses an English subset of Emilia-YODAS, which contains waveform segments ranging from 3-30 seconds. This directory will contain the data cleanup scripts that were used for the specific dataset, while a pre-cleaned dataset might be released later
+The model can be trained on any speech dataset, but this project uses an English subset of Emilia-YODAS, which contains waveform segments ranging from 3-30 seconds. This directory will contain the data cleanup scripts that were used for the specific dataset, while a pre-cleaned dataset might be released later
 
 ## Data Filtering Classifier
 
